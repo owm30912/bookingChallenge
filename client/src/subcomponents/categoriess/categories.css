@@ -1,0 +1,20 @@
+.catogories {
+  display: flex;
+  gap: 10px;
+}
+.catogories .item img {
+  border-radius: 2px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 200px;
+  height: 150px;
+}
+.catogories .item .itemItfo {
+  padding: 5px 0px;
+}
+.catogories .item .itemItfo .tltle {
+  font-weight: 800;
+}
+.catogories .item .itemItfo .desc {
+  color: gray;
+}/*# sourceMappingURL=categories.css.map */

@@ -1,0 +1,68 @@
+.SearchItem {
+  height: 240px;
+  width: 720px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid lightblue;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  padding: 0px 15px;
+}
+.SearchItem img {
+  height: 210px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+}
+.SearchItem .itemInfo {
+  width: 505px;
+  height: 210px;
+}
+.SearchItem .itemInfo .infoTitle {
+  display: flex;
+  justify-content: space-between;
+}
+.SearchItem .itemInfo .infoTitle h2 {
+  font-size: 20px;
+  width: 300px;
+}
+.SearchItem .itemInfo .infoTitle .infoTitleRight {
+  display: flex;
+  gap: 5px;
+  text-align: right;
+}
+.SearchItem .itemInfo .infoTitle .infoTitleRight button {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 5px 5px 5px 0px;
+}
+.SearchItem .itemInfo .infoDes .far {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  font-size: 12px;
+  margin-right: 5px;
+}
+.SearchItem .itemInfo .infoDes .discount {
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  font-weight: 200;
+  padding: 5px;
+  border: none;
+  background-color: var(--primary-color);
+}
+
+.infoDetail {
+  margin-top: 10px;
+  display: flex;
+}/*# sourceMappingURL=searchItem.css.map */

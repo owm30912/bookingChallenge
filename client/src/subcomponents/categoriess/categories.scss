@@ -1,0 +1,21 @@
+.catogories {
+  display: flex;
+  gap: 10px;
+  .item {
+    img {
+      border-radius: 2px;
+      object-fit: cover;
+      width: 200px;
+      height: 150px;
+    }
+    .itemItfo {
+      padding: 5px 0px;
+      .tltle {
+        font-weight: 800;
+      }
+      .desc {
+        color: gray;
+      }
+    }
+  }
+}

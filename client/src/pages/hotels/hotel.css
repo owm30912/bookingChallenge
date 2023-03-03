@@ -1,0 +1,255 @@
+.slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.613);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .sliderWrapper {
+  border-radius: 2px;
+  width: 60%;
+  height: 80%;
+  background-color: #fff;
+}
+.slider .sliderWrapper .wrapperTitle {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.slider .sliderWrapper .wrapperTitle .TitleName {
+  font-size: 20px;
+  margin: 0 20px;
+}
+.slider .sliderWrapper .wrapperTitle .CloseSign {
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.slider .sliderWrapper .wrapperTitle .CloseSign svg {
+  font-size: 30px;
+}
+.slider .sliderWrapper .wrapperTitle .CloseSign:hover {
+  color: var(--primary-color);
+}
+.slider .sliderWrapper .wrapperBody {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .sliderWrapper .wrapperBody img {
+  width: 600px;
+  height: 400px;
+  border-radius: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.slider .sliderWrapper .wrapperBody .arrow {
+  margin: 0 20px;
+  font-size: 40px;
+  color: gray;
+  cursor: pointer;
+}
+.slider .sliderWrapper .wrapperBody .arrow:hover {
+  color: var(--primary-color);
+}
+
+.HotelContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.HotelContainer .HotelWrapper {
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.HotelContainer .HotelWrapper .HotelHeadBtn {
+  display: flex;
+  gap: 3px;
+}
+.HotelContainer .HotelWrapper .HotelHeadBtn button {
+  border: none;
+  background-color: rgba(53, 164, 127, 0.5);
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 2px;
+  color: rgb(36, 104, 81);
+}
+.HotelContainer .HotelWrapper .HotelHeadBtn button:hover {
+  color: black;
+}
+.HotelContainer .HotelWrapper .hotelTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+}
+.HotelContainer .HotelWrapper .hotelTitle svg {
+  color: #f65050;
+}
+.HotelContainer .HotelWrapper .hotelTitle .titleLeft span {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.HotelContainer .HotelWrapper .hotelTitle .titleLeft .type {
+  color: white;
+  background-color: #00d8ff;
+  border-radius: 2px;
+  padding: 2px;
+}
+.HotelContainer .HotelWrapper .hotelTitle .titleLeft .hotelName {
+  font-weight: 600;
+  font-size: 20px;
+}
+.HotelContainer .HotelWrapper .hotelTitle .titleLeft .recommend {
+  vertical-align: bottom;
+  background-color: #cbe5d8;
+  font-size: 12px;
+  border-radius: 15px;
+  padding: 5px 10px 5px 0px;
+}
+.HotelContainer .HotelWrapper .hotelTitle .titleLeft .recommend svg {
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  color: var(--primary-color);
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.HotelContainer .HotelWrapper .hotelTitle .titleLeft .address {
+  font-size: 16px;
+}
+.HotelContainer .HotelWrapper .hotelTitle .titleLeft .address a {
+  font-size: 12px;
+  color: rgb(83, 129, 254);
+}
+.HotelContainer .HotelWrapper .hotelTitle .titleRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.HotelContainer .HotelWrapper .hotelTitle .titleRight button {
+  border: none;
+  background-color: var(--primary-color);
+  padding: 5px 20px;
+  font-size: 16px;
+  border-radius: 2px;
+  color: white;
+}
+.HotelContainer .HotelWrapper .hotelTitle .titleRight button:hover {
+  color: black;
+}
+.HotelContainer .HotelWrapper .hotelImgWrapper {
+  position: relative;
+}
+.HotelContainer .HotelWrapper .hotelImgWrapper .popupcomment {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+}
+.HotelContainer .HotelWrapper .hotelImgWrapper .popupcomment .commentInfo {
+  display: none;
+  opacity: 0;
+  height: 60px;
+  width: 250px;
+  border-radius: 2px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.HotelContainer .HotelWrapper .hotelImgWrapper .popupcomment .commentInfo .commentRate {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 5px 5px 5px 0px;
+}
+.HotelContainer .HotelWrapper .hotelImgWrapper .hotelImg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+}
+.HotelContainer .HotelWrapper .hotelImgWrapper .hotelImg .ImgWrap:first-child {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.HotelContainer .HotelWrapper .hotelImgWrapper .hotelImg .ImgWrap {
+  position: relative;
+  border-radius: 2px;
+}
+.HotelContainer .HotelWrapper .hotelImgWrapper .hotelImg .ImgWrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.HotelContainer .HotelWrapper .hotelImgWrapper .hotelImg .ImgWrap .more {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  color: white;
+  font-size: 20px;
+}
+.HotelContainer .HotelWrapper .hotelDes {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.HotelContainer .HotelWrapper .hotelDes .hotelDesText {
+  line-height: 2.5;
+}
+.HotelContainer .HotelWrapper .hotelDes .hotelDesPrice {
+  height: -moz-min-content;
+  height: min-content;
+  padding: 10px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba(53, 164, 127, 0.5);
+}
+.HotelContainer .HotelWrapper .hotelDes .hotelDesPrice button {
+  width: 200px;
+  color: white;
+  font-size: 20px;
+  padding: 5px 20px;
+  border: none;
+  background-color: rgb(53, 164, 127);
+  border-radius: 2px;
+}
+.HotelContainer .HotelWrapper .hotelDes .hotelDesPrice button:hover {
+  color: black;
+}/*# sourceMappingURL=hotel.css.map */

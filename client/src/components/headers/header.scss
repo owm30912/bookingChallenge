@@ -1,0 +1,118 @@
+.header {
+  position: relative; //配合SearchBarItem的absolute
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center; //靠中排列
+  padding: 0px 20px;
+  .headerContainer {
+    color: white;
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0px 100px 0px;
+    .headerTitle {
+      font-size: 45px;
+    }
+    .headerDes {
+      margin-top: 10px;
+    }
+    .headerSearchBar {
+      position: absolute; //跳出框架找到下個relative
+      bottom: -30px;
+      height: 55px;
+      width: 95%;
+      max-width: 1024px;
+      display: flex;
+      align-items: center; //上下置中
+      background-color: rgb(223, 130, 0);
+      border: none;
+      border-radius: 5px;
+      svg {
+        color: lightgray;
+        font-size: 24px;
+        margin-left: 10px;
+      }
+      input {
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 16px;
+        text-overflow: ellipsis; //特殊用法要搭配下面width
+      } //他字數超過框框時可以從“你要去哪裡？”變成“你要去...”這樣就不會超出版型
+      .SearchBarItem:first-child {
+        //第一個SearchBarItem
+        width: calc(34% - 20px); //加上這個，可以讓”你要去哪裡“縮小的比別人快
+      }
+      .SearchBarItem {
+        height: 50px;
+        width: 320px;
+        margin-left: 2px;
+        display: flex;
+        align-items: center;
+        gap: 10px; //Item裡面中icon 與input 或是 text的間距
+        color: black;
+        background-color: #fff;
+        border-radius: 2px;
+        cursor: pointer; //讓他們觸控時鼠標會變顏色
+        .calendar {
+          position: absolute;
+          top: 56px;
+          border: 1px lightgray solid;
+          box-shadow: 0px 0px 15px lightgray;
+        }
+        .ConditionsContainer {
+          position: absolute; //絕對位置
+          top: 60px;
+          right: 0;
+          width: auto;
+          background-color: white;
+          box-shadow: 0px 0px 15px lightgray;
+          border-radius: 5px;
+          padding: 10px 40px;
+          cursor: default;
+          .condition {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 400px;
+            height: 60px;
+            p {
+              font-size: 14px;
+              color: gray;
+            }
+            .conditionCounter {
+              display: flex;
+              width: 100px;
+              justify-content: space-between; // 上下對齊
+              align-items: center;
+              .conditionCounterButton {
+                width: 30px;
+                height: 30px;
+                border-radius: 2px;
+                color: var(--primary-color);
+                background-color: white;
+                border: 1px solid var(--primary-color);
+                cursor: pointer;
+                &:hover {
+                  background-color: rgba(53, 164, 127, 0.1);
+                }
+                &:disabled {
+                  cursor: not-allowed;
+                }
+              }
+            }
+          }
+        }
+      }
+      .SearchBarBtn {
+        border: none;
+        margin: 0px 2px 0px 2px;
+        width: 60px;
+        height: 50px;
+        border-radius: 2px;
+        background-color: var(--primary-color);
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
